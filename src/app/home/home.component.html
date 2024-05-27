@@ -1,0 +1,69 @@
+<div class="container" *ngIf = "flag == false">
+  <div class="first">
+    <div class="heading d-flex justify-content-center">
+      <div class="text-center">
+        <h1 class="italics-heading">I'm Looking For...</h1>
+        <form class="d-flex">
+          <div class="row">
+            <div class="col-md-12 d-flex align-items-center">
+              <input class="search-bar form-control mr-2" type="search" placeholder="Enter a Job Description" aria-label="Search">
+              <button class="btn btn-info" type="submit">Search</button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="d-flex gap-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">
+                  Full Time
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">
+                  Part Time/Casual/Freelancer
+                </label>
+              </div>
+              <div class="dropdown-component">
+                <div class="btn-group">
+                  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                    Select Your Location
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><button class="dropdown-item" type="button">Mumbai</button></li>
+                    <li><button class="dropdown-item" type="button">Pune</button></li>
+                    <li><button class="dropdown-item" type="button">Chennai</button></li>
+                    <li><button class="dropdown-item" type="button">Hyderabad</button></li>
+                    <li><button class="dropdown-item" type="button">Delhi</button></li>
+                    <li><button class="dropdown-item" type="button">Kolkata</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-info" (click)="onRegister()">Register</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="second text-center"> 
+    <div class="digital-recruitment">
+      <h3>We're Leaders in</h3>
+      <h2>Creative Digital Recruitment</h2>
+    </div>
+    <div class="paragraph">
+      <p>Based in Surry Hills, the creative hub in Sydney we are surrounded by creativity and that reflects on the type of jobs we recruit for</p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-outline-info">Find Out More About Us!</button>
+    </div>
+  </div>
+</div>
+<div *ngIf = "flag == true">
+  <app-registration></app-registration>
+</div>

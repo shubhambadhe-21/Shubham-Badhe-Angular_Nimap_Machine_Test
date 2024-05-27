@@ -1,0 +1,23 @@
+<div class="container profile-container">
+  <div class="row">
+    <div class="col-md-4 text-center profile-image">
+      <img src="{{ formData.photo }}" alt="Profile Photo" />
+      <div class="profile-buttons">
+        <button class="btn btn-warning btn-block">Edit Photo</button>
+        <button class="btn btn-warning btn-block">Edit Profile</button>
+      </div>
+    </div>
+    <div class="col-md-8 profile-details">
+      <h2>Profile</h2>
+      <p>
+        I'm {{ formData.firstName }} {{ formData.lastName }} and I'm above
+        {{ formData.age }} years and you can send your emails to
+        <a href="{{ formData.email }}">{{ formData.email }}</a
+        >. I live in the state of {{ formData.country }}. I like to play hockey,
+        football, and reading books. And please send me newsletters. Please
+        reach out to me on my phone number {{ formData.phone }}.
+      </p>
+      <button class="btn btn-outline-dark agree-button">I Agree</button>
+    </div>
+  </div>
+</div>
